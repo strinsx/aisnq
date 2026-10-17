@@ -36,6 +36,7 @@
 - Bundled the three existing variable fonts locally so production builds do not require Google Fonts access.
 - Verified TypeScript, lint, and the production build pass in this checkout.
 - Generated a live five-question mixed quiz from representative study notes using the original project's Gemini settings. The returned quiz had the requested 3/1/1 type split and source sections from the notes.
+- Fixed the quiz RadioGroup warning by passing `null` for unanswered choices, then verified lint, the production build, and quiz grading tests.
 
 ## In Progress
 
