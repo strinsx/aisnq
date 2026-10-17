@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import localFont from "next/font/local";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 const inter = localFont({
@@ -26,7 +27,6 @@ const jetBrainsMono = localFont({
 
 export const metadata: Metadata = {
   title: "AISNQ",
-  description: "A study space for turning learning material into useful notes and practice.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -35,7 +35,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       lang="en"
       className={`${inter.variable} ${playfairDisplay.variable} ${jetBrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Toaster position="top-right" richColors />
+      </body>
     </html>
   );
 }
