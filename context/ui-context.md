@@ -2,7 +2,7 @@
 
 ## Theme
 
-The global visual system is the tweakcn theme installed from `https://tweakcn.com/r/themes/cmnn98cgf000304l76gib2grt` (OpenProfile.me). It provides warm off-white light surfaces, a black primary, a yellow accent, and a charcoal dark variant. The light theme is the default; adding `.dark` to the document enables the dark token set. No theme switcher is part of this foundation unit.
+The global visual system is the tweakcn theme installed from `https://tweakcn.com/r/themes/cmnn98cgf000304l76gib2grt` (OpenProfile.me). It provides warm off-white light surfaces, a black primary, a yellow accent, and a charcoal dark variant. The light theme is the default; adding `.dark` to the document enables the dark token set. The homepage header includes an animated theme toggle that reveals the incoming theme with a rectangular View Transition clip-path; `next-themes` owns persistence and the `dark` class.
 
 ## Colors
 

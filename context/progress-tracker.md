@@ -38,6 +38,7 @@
 - Generated a live five-question mixed quiz from representative study notes using the original project's Gemini settings. The returned quiz had the requested 3/1/1 type split and source sections from the notes.
 - Fixed the quiz RadioGroup warning by passing `null` for unanswered choices, then verified lint, the production build, and quiz grading tests.
 - Replaced the global tweakcn theme with the OpenProfile.me theme, wired its three self-hosted variable fonts (Plus Jakarta Sans, Source Serif 4, Roboto Mono) into `next/font/local`, and documented the new tokens.
+- Added the animated rectangle theme toggle with a View Transition clip-path reveal, wired `next-themes` persistence into the root layout, and documented the toggle in the UI context.
 
 ## In Progress
 
@@ -67,6 +68,7 @@
 - Keep quizzes and answers in memory; closing the notes Dialog discards progress. Grade answers in the browser against the returned answer key.
 - Require mixed quizzes to allocate roughly half their questions to the selected priority type and split the rest across the other two types.
 - Use locally stored versions of the theme fonts through `next/font/local` for reproducible offline builds.
+- Use the Magic UI AnimatedThemeToggler with the `rectangle` variant, controlled by `next-themes`, so theme persistence and view-transition animation stay in sync.
 
 ## Session Notes
 

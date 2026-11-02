@@ -2,9 +2,11 @@
 
 import { useEffect, useRef, useState, type ChangeEvent, type DragEvent } from "react";
 import { ArrowLeftIcon, FileTextIcon, UploadIcon } from "lucide-react";
+import { useTheme } from "next-themes";
 import { toast } from "sonner";
 
-import { Button } from "@/components/ui/button";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -65,6 +67,7 @@ function responseError(value: unknown, fallback = "Notes could not be generated 
 }
 
 export default function Home() {
+  const { resolvedTheme, setTheme } = useTheme();
   const inputRef = useRef<HTMLInputElement>(null);
   const dragDepth = useRef(0);
   const [phase, setPhase] = useState<Phase>("idle");
@@ -240,16 +243,24 @@ export default function Home() {
 
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-4xl flex-col gap-10 px-5 py-12 sm:px-8 sm:py-16">
-      <header className="space-y-3">
-        <p className="font-mono text-xs font-medium tracking-[0.2em] text-muted-foreground uppercase">
-          AISNQ
-        </p>
-        <h1 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
-          Turn a PDF into study notes
-        </h1>
-        <p className="max-w-2xl text-muted-foreground">
-          Upload your course material and get a structured notes draft to review.
-        </p>
+      <header className="flex items-start justify-between gap-4">
+        <div className="space-y-3">
+          <p className="font-mono text-xs font-medium tracking-[0.2em] text-muted-foreground uppercase">
+            AISNQ
+          </p>
+          <h1 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
+            Turn a PDF into study notes
+          </h1>
+          <p className="max-w-2xl text-muted-foreground">
+            Upload your course material and get a structured notes draft to review.
+          </p>
+        </div>
+        <AnimatedThemeToggler
+          variant="rectangle"
+          theme={resolvedTheme === "dark" ? "dark" : "light"}
+          onThemeChange={setTheme}
+          className={buttonVariants({ variant: "outline", size: "icon" })}
+        />
       </header>
 
       <section aria-label="PDF upload" className="space-y-6">

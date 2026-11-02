@@ -18,6 +18,7 @@
 - `app/` owns routes, the root layout, global styles, and metadata.
 - `components/ui/` contains shadcn-generated primitives. Update them through the shadcn CLI; do not hand-edit generated files.
 - `components/` contains feature-level compositions such as the generic Data Table pattern.
+- `components/theme-provider.tsx` owns theme persistence through `next-themes`. `components/ui/animated-theme-toggler.tsx` owns the View Transition clip-path animation.
 - `lib/` contains shared utilities. `lib/utils.ts` re-exports the `cn()` class-merging helper.
 - `context/` contains product and implementation guidance.
 - `app/page.tsx` owns the client-only upload and in-memory result flow.
