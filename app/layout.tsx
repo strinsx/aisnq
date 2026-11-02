@@ -4,24 +4,24 @@ import localFont from "next/font/local";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
-const inter = localFont({
-  src: "./fonts/inter-latin.woff2",
-  weight: "100 900",
-  variable: "--font-inter",
+const plusJakartaSans = localFont({
+  src: "./fonts/plus-jakarta-sans-latin.woff2",
+  weight: "200 800",
+  variable: "--font-plus-jakarta",
   display: "swap",
 });
 
-const playfairDisplay = localFont({
-  src: "./fonts/playfair-display-latin.woff2",
-  weight: "400 900",
-  variable: "--font-playfair",
+const sourceSerif = localFont({
+  src: "./fonts/source-serif-4-latin.woff2",
+  weight: "200 900",
+  variable: "--font-source-serif",
   display: "swap",
 });
 
-const jetBrainsMono = localFont({
-  src: "./fonts/jetbrains-mono-latin.woff2",
-  weight: "100 800",
-  variable: "--font-jetbrains",
+const robotoMono = localFont({
+  src: "./fonts/roboto-mono-latin.woff2",
+  weight: "100 700",
+  variable: "--font-roboto-mono",
   display: "swap",
 });
 
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfairDisplay.variable} ${jetBrainsMono.variable}`}
+      className={`${plusJakartaSans.variable} ${sourceSerif.variable} ${robotoMono.variable}`}
     >
       <body>
         {children}

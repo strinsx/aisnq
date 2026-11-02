@@ -37,6 +37,7 @@
 - Verified TypeScript, lint, and the production build pass in this checkout.
 - Generated a live five-question mixed quiz from representative study notes using the original project's Gemini settings. The returned quiz had the requested 3/1/1 type split and source sections from the notes.
 - Fixed the quiz RadioGroup warning by passing `null` for unanswered choices, then verified lint, the production build, and quiz grading tests.
+- Replaced the global tweakcn theme with the OpenProfile.me theme, wired its three self-hosted variable fonts (Plus Jakarta Sans, Source Serif 4, Roboto Mono) into `next/font/local`, and documented the new tokens.
 
 ## In Progress
 
@@ -62,10 +63,10 @@
 - Keep generated `components/ui/` files untouched after installation.
 - Send PDFs directly to Gemini inline; validate the structured result with Zod and keep uploads and notes only in memory.
 - Use `gemini-3.5-flash-lite` for the local prototype model while keeping `GEMINI_MODEL` configurable.
-- Map `font-heading` to Playfair Display, while Inter remains the interface font and JetBrains Mono identifies source and timing metadata.
+- Map `font-heading` to Source Serif 4, while Plus Jakarta Sans remains the interface font and Roboto Mono identifies source and timing metadata.
 - Keep quizzes and answers in memory; closing the notes Dialog discards progress. Grade answers in the browser against the returned answer key.
 - Require mixed quizzes to allocate roughly half their questions to the selected priority type and split the rest across the other two types.
-- Use locally stored versions of the previously fetched fonts through `next/font/local` for reproducible offline builds.
+- Use locally stored versions of the theme fonts through `next/font/local` for reproducible offline builds.
 
 ## Session Notes
 

@@ -2,7 +2,7 @@
 
 ## Theme
 
-The global visual system is the tweakcn theme installed from `https://tweakcn.com/r/themes/cmlm03etv000204lh15608kec`. It provides warm neutral light surfaces and a charcoal dark variant. The light theme is the default; adding `.dark` to the document enables the dark token set. No theme switcher is part of this foundation unit.
+The global visual system is the tweakcn theme installed from `https://tweakcn.com/r/themes/cmnn98cgf000304l76gib2grt` (OpenProfile.me). It provides warm off-white light surfaces, a black primary, a yellow accent, and a charcoal dark variant. The light theme is the default; adding `.dark` to the document enables the dark token set. No theme switcher is part of this foundation unit.
 
 ## Colors
 
@@ -10,28 +10,28 @@ Use the shadcn semantic CSS variables through Tailwind utilities such as `bg-bac
 
 | Role | CSS Variable | Light value | Dark value |
 | --- | --- | --- | --- |
-| Page background | `--background` | `oklch(0.9195 0.0169 88.0030)` | `oklch(0.1913 0 0)` |
-| Surface | `--card` | `oklch(0.9530 0.0156 86.4257)` | `oklch(0.2264 0 0)` |
-| Primary text | `--foreground` | `oklch(0.2350 0 0)` | `oklch(0.9173 0.0133 82.4015)` |
-| Muted text | `--muted-foreground` | `oklch(0.4688 0.0136 84.5932)` | `oklch(0.6348 0.0113 81.7875)` |
-| Primary accent | `--primary` | `oklch(0.3012 0 0)` | `oklch(0.8520 0.0205 100.6306)` |
-| Border | `--border` | `oklch(0.8434 0.0231 87.1621)` | `oklch(0.2931 0 0)` |
-| Error | `--destructive` | `oklch(0.5771 0.2152 27.3250)` | `oklch(0.6368 0.2078 25.3313)` |
+| Page background | `--background` | `oklch(0.9660 0.0053 106.4982)` | `oklch(0.2393 0 0)` |
+| Surface | `--card` | `oklch(0.9970 0 0)` | `oklch(0.1913 0 0)` |
+| Primary text | `--foreground` | `oklch(0.1638 0 0)` | `oklch(0.9660 0.0053 106.4982)` |
+| Muted text | `--muted-foreground` | `oklch(0.4459 0 0)` | `oklch(0.7155 0 0)` |
+| Primary accent | `--primary` | `oklch(0.1638 0 0)` | `oklch(0.9970 0 0)` |
+| Border | `--border` | `oklch(0.4091 0 0)` | `oklch(0.9660 0.0053 106.4982)` |
+| Error | `--destructive` | `oklch(0.6368 0.2078 25.3313)` | `oklch(0.6368 0.2078 25.3313)` |
 | Success | — | Not defined by the selected theme | Not defined by the selected theme |
 
 ## Typography
 
 | Role | Font stack | Variable |
 | --- | --- | --- |
-| UI text | Inter, sans-serif | `--font-sans` |
-| Metadata/mono | JetBrains Mono, monospace | `--font-mono` |
-| Headings | Playfair Display, serif | `--font-serif` and `--font-heading` |
+| UI text | Plus Jakarta Sans, sans-serif | `--font-sans` |
+| Metadata/mono | Roboto Mono, monospace | `--font-mono` |
+| Headings | Source Serif 4, serif | `--font-serif` and `--font-heading` |
 
-Load all three locally stored variable fonts through Next.js font optimization in the root layout. The prototype uses Inter for body and controls, Playfair Display for headings and component titles, and JetBrains Mono for small source/timing metadata. The fonts are self-hosted rather than relying on device installation or a build-time network request.
+Load all three locally stored variable fonts through Next.js font optimization in the root layout. The prototype uses Plus Jakarta Sans for body and controls, Source Serif 4 for headings and component titles, and Roboto Mono for small source/timing metadata. The fonts are self-hosted rather than relying on device installation or a build-time network request.
 
 ## Border Radius
 
-The theme base radius is `0.5rem` in `--radius`. Use the generated scale (`rounded-sm`, `rounded-md`, `rounded-lg`, and larger variants) instead of arbitrary radii.
+The theme base radius is `1.4rem` in `--radius`. Use the generated scale (`rounded-sm`, `rounded-md`, `rounded-lg`, and larger variants) instead of arbitrary radii.
 
 ## Component Library
 

@@ -10,4 +10,4 @@ AISNQ turns a PDF into a draft of structured study notes and a practice quiz. Up
 
 The API key is read only by the server routes. Quiz generation uses the study notes JSON, not the original PDF. Generated notes and questions can be incomplete or inaccurate; check them against the original PDF.
 
-The bundled Inter, Playfair Display, and JetBrains Mono webfonts are covered by [their OFL license](app/fonts/OFL.txt).
+The bundled Plus Jakarta Sans, Source Serif 4, and Roboto Mono webfonts are covered by [their OFL license](app/fonts/OFL.txt).
